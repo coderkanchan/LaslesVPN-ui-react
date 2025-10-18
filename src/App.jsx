@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Layout from './Layout.jsx';
 import Home from './Home.jsx';
 import About from './Routes/About.jsx';
@@ -12,7 +12,7 @@ import SignUp from './Routes/SignUp.jsx';
 
 function App() { 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />} />
@@ -25,7 +25,7 @@ function App() {
                     <Route path='/SignUp' element={<SignUp/>}/>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
 
